@@ -1,0 +1,5 @@
+FROM mysql/mysql-server
+ENV MYSQL_ROOT_USER=root
+ENV MYSQL_ROOT_PASSWORD=password
+ENV MYSQL_DATABASE=ready4stage
+ENV MYSQL_CONN="-h127.0.0.1 -u${MYSQL_ROOT_USER} -p${MYSQL_ROOT_PASSWORD} --protocol=tcp -P3306"
