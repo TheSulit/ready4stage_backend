@@ -11,4 +11,3 @@ elif (sys.platform == "darwin"):
 os.system("docker build -t mysqldb-image .")
 os.system("docker run -d -h localhost -p 3000:3306 --name mysqldb-container mysqldb-image")
 os.system("docker exec -it mysqldb-container bash -c 'mysql -u root -ppassword'")
-    
