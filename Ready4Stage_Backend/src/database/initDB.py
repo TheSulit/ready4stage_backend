@@ -24,7 +24,8 @@ except docker.errors.ImageNotFound:
 
 #Run the Docker Container if not running already
 try:
-    client.containers.get("mysqldb-container").status
+    if (client.containers.get("mysqldb-container").status != "running"):
+        client.containers.get("mysqldb-container").start()
 except docker.errors.NotFound:
     client.containers.run(
         ports={
@@ -58,7 +59,7 @@ try:
         for sqlStatement in sqlStatements:
             mycursor.execute(sqlStatement)
 except mysql.connector.errors.ProgrammingError:
-    print("Database already set") 
+    print("Database already set")
 
 db.commit()
 db.close()

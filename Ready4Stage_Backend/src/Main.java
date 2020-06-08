@@ -1,5 +1,11 @@
+
+
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Database db = new Database();
+        db.initializeDB();
+        //example Statement
+        db.createDBStatement(db.connectDB(), "SELECT * FROM Teilnehmer");
     }
+
 }
