@@ -14,7 +14,6 @@ public class Database {
         catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("database initialized via python script (mysql-docker)");
     }
 
     private static boolean isWindows() {

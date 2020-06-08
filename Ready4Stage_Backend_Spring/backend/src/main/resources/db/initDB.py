@@ -7,9 +7,9 @@ import time
 
 # print(sys.version)
 if (sys.platform == "win32" or sys.platform == "win64"):
-    os.chdir("src\\database\\ready4Stage_sql_files")
+    os.chdir("src\\main\\resources\\db\\ready4Stage_sql_files")
 elif (sys.platform == "darwin"):
-    os.chdir("src/database/ready4Stage_sql_files")
+    os.chdir("src/main/resources/db/ready4Stage_sql_files")
 
 client = docker.from_env()
 
