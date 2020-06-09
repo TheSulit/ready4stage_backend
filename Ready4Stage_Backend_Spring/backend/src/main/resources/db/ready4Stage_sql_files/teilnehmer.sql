@@ -1,5 +1,6 @@
-CREATE TABLE Teilnehmer(
-  Namen           VARCHAR(10) NOT NULL PRIMARY KEY
+CREATE TABLE teilnehmer(
+  id              int NOT NULL AUTO_INCREMENT PRIMARY KEY
+  ,Namen          VARCHAR(10) NOT NULL
   ,Vorname        VARCHAR(9) NOT NULL
   ,Bankverbindung VARCHAR(30)
   ,Kurse          VARCHAR(17) NOT NULL
@@ -7,7 +8,7 @@ CREATE TABLE Teilnehmer(
   ,Telefon        VARCHAR(30)
   ,Adresse        VARCHAR(30)
 );
-INSERT INTO Teilnehmer(Namen,Vorname,Bankverbindung,Kurse,Email,Telefon,Adresse) VALUES 
+INSERT INTO teilnehmer(Namen,Vorname,Bankverbindung,Kurse,Email,Telefon,Adresse) VALUES 
 ('Battner','Eva',NULL,'Gesang',NULL,NULL,NULL),
 ('Mitz','Martina',NULL,'Gesang',NULL,NULL,NULL),
 ('Jäger','Dirk',NULL,'Gitarre',NULL,NULL,NULL),

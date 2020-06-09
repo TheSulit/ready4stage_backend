@@ -1,6 +1,6 @@
 package com.ready4stage.backend.Database;
 
-public class Database {
+public class initDatabase {
 
     public void initializeDB() {
         try {

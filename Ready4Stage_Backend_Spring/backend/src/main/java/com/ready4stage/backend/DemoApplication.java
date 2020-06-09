@@ -8,9 +8,8 @@ import com.ready4stage.backend.Database.*;
 public class DemoApplication {
 
 	public static void main(String[] args) {
+		new initDatabase().initializeDB();
 		SpringApplication.run(DemoApplication.class, args);
-		Database db = new Database();
-		db.initializeDB();
 	}
 
 }

@@ -3,13 +3,6 @@ import os
 import mysql.connector
 import docker
 import time
-#import pandas as pd
-
-# print(sys.version)
-if (sys.platform == "win32" or sys.platform == "win64"):
-    os.chdir("src\\main\\resources\\db\\ready4Stage_sql_files")
-elif (sys.platform == "darwin"):
-    os.chdir("src/main/resources/db/ready4Stage_sql_files")
 
 client = docker.from_env()
 
@@ -49,6 +42,12 @@ db = mysql.connector.connect(
 
 mycursor = db.cursor()
 
+# print(sys.version)
+if (sys.platform == "win32" or sys.platform == "win64"):
+    os.chdir("src\\main\\resources\\db\\ready4Stage_sql_files")
+elif (sys.platform == "darwin"):
+    os.chdir("src/main/resources/db/ready4Stage_sql_files")
+
 #run sql Statements in sql files
 sqlFiles = ["dozenten.sql", "LS_Ready4Stage_Belegung_Raum_1.sql", "LS_Ready4Stage_Belegung_Raum_2.sql", "raumplan.sql", "teilnehmer.sql"]
 try: 
@@ -63,4 +62,4 @@ except mysql.connector.errors.ProgrammingError:
 
 db.commit()
 db.close()
-mycursor.close()
+#mycursor.close()
