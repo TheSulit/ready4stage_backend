@@ -6,9 +6,9 @@ public class initDatabase {
         try {
             Process process;
             if(isWindows()) {
-                process = Runtime.getRuntime().exec("python src\\main\\resources\\db\\initDB.py");
+                process = Runtime.getRuntime().exec("python src\\main\\resources\\db\\createDockerDB.py");
             } else {
-                process = Runtime.getRuntime().exec("python src/main/resources/db/initDB.py");
+                process = Runtime.getRuntime().exec("python src/main/resources/db/createDockerDB.py");
             }
         }
         catch (Exception e) {

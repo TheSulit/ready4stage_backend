@@ -101,6 +101,4 @@ public class TeilnehmerModel {
         this.Adresse = Adresse;
     }
 
-    
-
 }
